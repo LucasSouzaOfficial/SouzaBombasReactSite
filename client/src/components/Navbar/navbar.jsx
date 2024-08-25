@@ -1,13 +1,13 @@
 import NavbarButton from './navbar-button'
 import { useState } from 'react'
 import AdBar from './ad-bar'
+import logo from '../../assets/images/logo.png'
 
 export default function NavBar(){
 
     const [toggleMenu, setToggleMenu] = useState(false)
     const [toggleNavBar, setToggleNavBar] = useState(false)
-    const logo = '/logo.png'
-    console.log(logo)
+    //const logo = '../assets/images/logo.png'
 
     const toggle = ()=>{
         setToggleMenu(!toggleMenu)

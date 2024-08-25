@@ -1,13 +1,9 @@
 import { useState } from 'react';
 import './index.css';
 import Navbar from './components/Navbar/navbar'
-import BgImage from './components/Background Image/bg-image';
-import AdBar from './components/Navbar/ad-bar';
-import Carousel from './components/Carousel/carousel';
 import TextHolder from './components/Content Card/Text-Holder';
-import ContextProvider from "./components/Background Image/contextProvider";
 import ThreeCards from './components/Content Card/three-cards';
-import CarouselImage from '/bobma.avif'
+import CarouselImage from './assets/images/bobma.avif'
 import BackgroundWithCarousel from './components/Background Image/Background&Carousel';
 
 export default function App() {
@@ -16,7 +12,7 @@ export default function App() {
   const CarouselProps = {
 
     title: `Bombas D'água vendas e manutenção`,
-    innerText: 'Estamos focados em fornecer aos nossos clientes o mais alto nível de qualidade e excelente serviço ao cliente.',
+    innerText: 'Estamos focados em fornecer o mais alto nível de qualidade e excelência em nosso serviço ao cliente.',
     buttonText: 'Faça seu Orçamento Agora',
 
   }

@@ -4,7 +4,18 @@ export default {
     './index.html',
     './src/**/*.jsx'],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        fadein: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        
+        animation:{
+          fadeIn: 'fadeIn 1s ease-in-out',
+        }
+      }
+    },
   },
   plugins: [],
 }

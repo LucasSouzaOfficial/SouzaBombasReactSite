@@ -1,0 +1,32 @@
+@keyframes fade-in {
+    0% {
+        background-image: url('../../assets/images/townN.jpg')
+    }
+
+    100%{
+        background-image: url('../../assets/images/building2.jpg')
+    }
+}   
+
+@keyframes fade-out {
+    0% {
+        background-image: url('../../assets/images/building2.jpg')
+    }
+
+    100%{
+        background-image: url('../../assets/images/townN.jpg')
+    }
+}   
+
+.anime-fade-in {
+    animation: fade-in 1.5s ease-in-out forwards;
+}
+
+
+.anime-fade-out {
+    animation: fade-out 1.5s ease-in-out forwards;
+}
+
+.initial_state {
+    background-image: url('../../assets/images/townN.jpg')
+}

@@ -1,15 +1,14 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import '../../assets/animations/keyframeBackground.css'
 
-export default function BgImage({image, isChanged}){
-    const [x, setX] = useState(false);
+export default function BgImage({image, className}){
 
-  
 
     return <div className={`m-0 p-0 overflow-x-hidden w-screen max-w-full flex h-screen md:h-[80vh] bg-cover
-     bg-center z-1 relative ease-in-out duration-500 transition-all ${x? 'opacity-0': 'opacity-100'}`}
+     bg-center z-1 relative ease-in-out duration-400 transition-all ${className}`}
         style={{ backgroundImage: `url(${image})`}}>
-           
         </div>
    
 }
+
+
+

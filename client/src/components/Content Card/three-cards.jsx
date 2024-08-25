@@ -1,9 +1,10 @@
 import Card from "./card"
+import urlImage from "../../assets/images/semt.jpg"
 
-const image = '/semt.jpg'
+const image = urlImage
 
 export default function ThreeCards(){
-    return <div className="m-auto grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 md:flex-row md:max-w-6xl p-2 text-black max-w-screen gap-1 relative
+    return <div className="m-auto grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 md:flex-row md:max-w-6xl p-2 text-black max-w-screen gap-4 relative
      transform translate-y-[-100px]">
             <Card img={image} title="Pressurizadores" text="Oferecemos também à nossos clientes pressurizadores da melhor qualidade."
              button="Saiba mais"/>

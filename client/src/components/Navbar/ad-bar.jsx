@@ -7,7 +7,7 @@ export default function AdBar(props){
             </li>
              <div className="font-light">|</div>
             <li>
-                <a href="">vendas@souabombas.com.br</a>
+                <a href="">vendas@souzabombas.com.br</a>
             </li>
         </ul>
     </div>
