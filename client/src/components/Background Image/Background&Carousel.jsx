@@ -1,12 +1,13 @@
 import { useState } from "react"
 import Carousel from "../Carousel/carousel"
 import BgImage from "./bg-image"
-import initialBackgroundImage from '../../assets/images/townN.jpg'
+import initialBackgroundImageURL from '../../assets/images/townN.jpg'
 
 export default function BackgroundWithCarousel({children}){
-
+    
+    const initialBackgroundImage = initialBackgroundImageURL
     const [backgroundImage, setBackgroundImage] = useState(initialBackgroundImage)
-    const [animationClass, setAnimationClass] = useState('initial_state');
+    const [animationClass, setAnimationClass] = useState('initial');
 
     const handleBackgroundImage = (newImage)=>{
         setBackgroundImage(newImage)

@@ -28,7 +28,7 @@ export default function App() {
           </div>
           <div className="flex justify-between items-center min-w-full">
             <TextHolder {...CarouselProps}/>
-          <iframe className='text-center m-14'
+          <iframe className='hidden md:flex text-center m-14'
               width="960"
               height="310"
               src={`https://www.youtube.com/embed/wqpKwZAPbc0?start=115&autoplay=1&mute=1`}

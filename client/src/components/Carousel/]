@@ -24,18 +24,18 @@ export default function Carousel({children, setBackground, setAnimationClass}){
             return
 
         }else{
-            
-            setCarouselIndex((carouselIndex) => (carouselIndex === children.length - 1 ? 0 : carouselIndex + 1))
-
-            setTimeout(()=>{setBackground(BackgroundImages[carouselIndex])}, 200);
+            updateIndex();
+            setTimeout(()=>{setBackground(BackgroundImages[Index])}, 900)
                 
             setTransitioning(true)
 
             setTimeout(()=>{
                 setTransitioning(false)
-            }, 800)
+            }, 720)
 
-                        setAnimationClass(prevClass => prevClass === 'anime-fade-in' ? 'anime-fade-out': 'anime-fade-in'
+            setCarouselIndex((carouselIndex) => (carouselIndex === children.length - 1 ? 0 : carouselIndex + 1))
+
+            setAnimationClass(prevClass => prevClass === 'anime-fade-in' ? 'anime-fade-out': 'anime-fade-in'
                                             
             );
             
@@ -45,7 +45,7 @@ export default function Carousel({children, setBackground, setAnimationClass}){
 
     }
 
-    return <div className="flex-row m-auto w-screen absolute max-w-full top-48">
+    return <div className="flex-row m-auto w-screen absolute max-w-full overflow-x-hidden top-48">
 
         <button onClick={nextSlide} className="
         bg-[#0284c7] rounded absolute top-56 right-0 translateY-[-50%] mr-4 z-[1] hidden md:block"> 
