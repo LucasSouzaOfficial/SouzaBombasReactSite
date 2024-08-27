@@ -9,15 +9,8 @@ export default function Carousel({children, setBackground, setAnimationClass}){
     const [carouselIndex, setCarouselIndex] = useState(0) 
     const [transitioning, setTransitioning] = useState(false)
     const BackgroundImages = [bgImage01, bgImage02]
-
-    const updateIndex = () => {
-        setCarouselIndex((prevIndex) => {
-          return (prevIndex + 1) % BackgroundImages.length;
-        });
-      };
-
-
-    function nextSlide(){
+    
+  function nextSlide(){
 
         if(transitioning){
 
