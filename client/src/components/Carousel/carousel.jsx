@@ -40,20 +40,17 @@ export default function Carousel({children, setBackground, setAnimationClass}){
 
     return <div className="flex-row m-auto w-screen absolute max-w-full top-48">
 
-        <button onClick={nextSlide} className="
-        bg-[#0284c7] rounded absolute top-56 right-0 translateY-[-50%] mr-4 z-[1] hidden md:block"> 
+        <button onClick={nextSlide} className="rounded absolute top-56 right-0 translateY-[-50%] mr-4 z-[1] hidden md:block"> 
             <RightArrow /> 
         </button>
 
-        <button onClick={nextSlide} className="
-        bg-[#0284c7] rounded absolute top-56 left-0 translateY-[-50%] ml-4 z-[1]  md:block">
+        <button onClick={nextSlide} className="rounded absolute top-56 left-0 translateY-[-50%] ml-4 z-[1]  md:block">
             <LeftArrow/>
         </button>
 
-        <div className=" w-screen flex justify-between max-w-5xl m-auto overflow-hidden">
-            <div className={`w-screen flex justify-between m-auto transition-all
-            ease-in-out duration-700 md:bg-gradient-to-r from-slate-900
-            relative max-w-5xl md:max-h-72 max-h-72`}
+        <div className=" w-screen flex justify-between lg:max-w-5xl max-w-[95vw] md:max-w-[92vw] m-auto overflow-hidden">
+            <div className={`w-screen flex justify-between max-w-[95vw] md:max-w-5xl transition-all m-auto
+            ease-in-out duration-700 relative md:max-h-72 max-h-96`}
 
             style={{transform: `translateX(-${carouselIndex * 100}%)`}}>                           
                 {children}
