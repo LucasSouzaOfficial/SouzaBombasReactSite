@@ -3,6 +3,7 @@ import LeftArrow from "./leftArrow"
 import RightArrow from "./rightArrow"
 import bgImage01 from '../../assets/images/building2.jpg'
 import bgImage02 from '../../assets/images/townN.jpg'
+import { useEffect } from 'react'
 
 export default function Carousel({children, setBackground, setAnimationClass}){
 
@@ -17,18 +18,22 @@ export default function Carousel({children, setBackground, setAnimationClass}){
             return
 
         }else{
-            
-            setCarouselIndex((carouselIndex) => (carouselIndex === children.length - 1 ? 0 : carouselIndex + 1))
-
-            setTimeout(()=>{setBackground(BackgroundImages[carouselIndex])}, 200);
-                
-            setTransitioning(true)
+           
+           setTransitioning(true)
 
             setTimeout(()=>{
                 setTransitioning(false)
-            }, 800)
+            }, 900)
 
-                        setAnimationClass(prevClass => prevClass === 'anime-fade-in' ? 'anime-fade-out': 'anime-fade-in'
+
+           
+            setTimeout(()=>{
+              setCarouselIndex((carouselIndex) => (carouselIndex === children.length - 1 ? 0 : carouselIndex + 1))
+              },420)
+
+            setTimeout(()=>{setBackground(BackgroundImages[carouselIndex])}, 200); 
+
+            setAnimationClass(prevClass => prevClass === 'anime-fade-in' ? 'anime-fade-out': 'anime-fade-in'
                                             
             );
             
@@ -38,7 +43,7 @@ export default function Carousel({children, setBackground, setAnimationClass}){
 
     }
 
-    return <div className="flex-row m-auto w-screen absolute max-w-full top-48">
+    return <div className="flex-row m-auto w-screen absolute max-w-full top-[200px] md:top-72">
 
         <button onClick={nextSlide} className="rounded absolute top-56 right-0 translateY-[-50%] mr-4 z-[1] hidden md:block"> 
             <RightArrow /> 
@@ -48,9 +53,9 @@ export default function Carousel({children, setBackground, setAnimationClass}){
             <LeftArrow/>
         </button>
 
-        <div className=" w-screen flex justify-between lg:max-w-5xl max-w-[95vw] md:max-w-[92vw] m-auto overflow-hidden">
-            <div className={`w-screen flex justify-between max-w-[95vw] md:max-w-5xl transition-all m-auto
-            ease-in-out duration-700 relative md:max-h-72 max-h-96`}
+        <div className=" w-full flex justify-between max-w-[90vw] md:max-w-[94vw] xl:max-w-[82vw] 2xl:max-w-[62vw] m-auto overflow-hidden">
+            <div className={`w-full flex justify-between  m-auto
+            ease-in-out duration-500 relative ${transitioning? 'opacity-0': 'opacity-100'}`}
 
             style={{transform: `translateX(-${carouselIndex * 100}%)`}}>                           
                 {children}

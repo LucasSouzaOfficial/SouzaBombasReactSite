@@ -14,7 +14,14 @@ export default {
         animation:{
           fadeIn: 'fadeIn 1s ease-in-out',
         }
-      }
+      },
+      
+      colors: {
+        
+        "primary-color": "var(--primary-color)",
+        
+      },
+
     },
   },
   plugins: [],

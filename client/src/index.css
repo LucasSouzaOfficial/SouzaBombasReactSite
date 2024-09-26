@@ -5,3 +5,10 @@
 .gradient_black {
   background: radial-gradient(#000000, #00000052);
 }
+
+:root {
+
+  --primary-color: #009fff;
+  
+}
+
