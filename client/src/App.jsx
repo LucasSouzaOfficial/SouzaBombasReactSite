@@ -16,9 +16,8 @@ export default function App() {
     title: `Bombas D'água vendas e manutenção`,
     innerText: 'Estamos focados em fornecer o mais alto nível de qualidade e excelência em nosso serviço ao cliente.',
     buttonText: 'Faça seu Orçamento Agora',
-    textCSS: 'text-2xl',
-    titleCSS: 'text-4xl',
-    CSS: '!bg-black/60 h-full rounded-xl',
+    textCSS: 'text-base text-shadow-lg',
+    titleCSS: 'text-xl md:text-4xl',
   }
 
 const CarouselProps2 = {
@@ -26,16 +25,15 @@ const CarouselProps2 = {
   title: `Bombas D'água vendas e manutenção`,
   innerText: 'Estamos focados em fornecer o mais alto nível de qualidade e excelência em nosso serviço ao cliente.',
   buttonText: 'Faça seu Orçamento Agora',
-  textCSS: 'text-2xl',
-  titleCSS: 'text-4xl',
-  CSS: 'h-full rounded-xl',
+  textCSS: 'text-base text-shadow-lg',
+  titleCSS: 'text-xl',
 }
   const TextHolderProps = {
     
     title: "Bombas D'agua",
     innerText: 'Garantimos o funcionamento de todos os dimensionamentos que prestamos aos clientes, também oferecemos manutenção dos equipamentos, peças e consultoria na área.',
-    textCSS: 'text-xl text-center text-black',
-    titleCSS: 'text-4xl text-black text-center m-auto',
+    textCSS: 'text-base md:text-lg text-center text-black',
+    titleCSS: 'text-xl md:text-2xl text-black text-center m-auto',
     
   } 
 
@@ -46,14 +44,14 @@ const CarouselProps2 = {
           
           <div className="flex justify-between items-center p-4 w-fit min-w-full">
           
-            <TextHolder {...CarouselProps} buttonCss="bg-primary-corlor hover:bg-transparent border-white hover:shadow hover:shadow-white hover:shadow-md border-2 border-rounded transiton-all ease-in-out duration-500"/>
+            <TextHolder {...CarouselProps} buttonCss="bg-primary-corlor hover:bg-transparent !text-sm border-white hover:shadow hover:shadow-white hover:shadow-md border-2 border-rounded transiton-all ease-in-out duration-500"/>
             <div className='hidden md:flex lg:w-full w-5/6 items-center h-full m-2'>
               <img className='m-auto w-full h-full rounded-xl' src={CarouselImage}></img>
             </div>
           </div>
         
           <div className="flex justify-between items-center min-w-full rounded-2xl">
-            <TextHolder {...CarouselProps2} buttonCss="border hover:bg-primary-color hover:border-primary-color transiton-all ease-in-out duration-300"/>
+            <TextHolder {...CarouselProps2} buttonCss="border hover:bg-primary-color !text-sm hover:border-primary-color transiton-all ease-in-out duration-300"/>
           </div>
 
         </BackgroundWithCarousel>

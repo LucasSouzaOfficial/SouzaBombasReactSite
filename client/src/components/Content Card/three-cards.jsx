@@ -7,7 +7,7 @@ import MediaContent from "../Media Content/MediaContent"
 const images = [image01, image02, image03]
 
 export default function ThreeCards(){
-    return <div className="transform max-w-full md:translate-y-[-100px] relative"> <div className="m-auto grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 md:flex-row md:max-w-6xl p-2 text-black max-w-screen gap-4 relative
+    return <div className="transform max-w-full translate-y-[-50px] md:translate-y-[-100px] relative"> <div className="m-auto grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 md:flex-row md:max-w-6xl p-2 text-black max-w-screen gap-4 relative
      ">
             <Card img={images[0]} title="Pressurizadores" text="Oferecemos também à nossos clientes pressurizadores da melhor qualidade."
              button="Saiba mais"/>

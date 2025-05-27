@@ -1,21 +1,11 @@
 @keyframes fade-in {
-    0% {
-        background-image: url('../../assets/images/townN.jpg')
-    }
-
-    100%{
-        background-image: url('../../assets/images/building2.jpg')
-    }
+    from{ opacity: 100;}
+    to { opacity: 0;}
 }   
 
 @keyframes fade-out {
-    0% {
-        background-image: url('../../assets/images/building2.jpg')
-    }
-
-    100%{
-        background-image: url('../../assets/images/townN.jpg')
-    }
+    from{ opacity: 0;}
+    to { opacity: 100;}
 }   
 
 .anime-fade-in {
@@ -28,5 +18,5 @@
 }
 
 .initial {
-    background-image: url('../../assets/images/townN.jpg')
+   opacity: 1; 
 }
